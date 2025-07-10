@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400;700&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --color-main: #0a78bf;
+  --color-sec: #6dc9f7;
+  --color-bright: #c8eaff;
+  --color-light: #f0f9ff;
+  --color-dark: #004470;
+}
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+* {
+  font-family: "Lexend Deca", sans-serif;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+html {
+  scroll-behavior: smooth;
+}
+.container {
+  margin-inline: auto;
+  transition: 0.3s ease;
+}
+h1 {
+  font-size: 3.2em;
+}
+h2 {
+  font-size: 32px;
+}
+p {
+  font-size: 16px;
+}
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5em;
+  }
+  h2 {
+    font-size: 24px;
+  }
+  p {
+    font-size: 14px;
+  }
+}
+.hov {
+  transition: 0.3s ease;
+}
+.hov:hover {
+  color: var(--color-sec);
+  transform: scale(1.1);
+}
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #3b82f6;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2563eb;
+}
+::selection {
+  background: var(--color-main);
+  color: #fff;
+}
+::-webkit-selection {
+  background: var(--color-main);
+  color: #fff;
+}
+/* *:focus {
+  outline: 2px solid var(--color-main);
+  outline-offset: 2px;
+} */
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  display: none !important;
+}
+
+/* animation start */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes slideOutLeft {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+}
+@keyframes slideOutRight {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+}
+.animate-slideIn {
+  animation: slideIn 0.35s;
+}
+.animate-slideOutLeft {
+  animation: slideOutLeft 0.35s;
+}
+.animate-slideOutRight {
+  animation: slideOutRight 0.35s;
+}
+/* animation end */
